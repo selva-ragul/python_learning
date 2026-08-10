@@ -1,0 +1,22 @@
+name=(input("enter the student name:"))
+tam=int(input("enter the tamil mark:"))
+eng=int(input("enter the English mark:"))
+mat=int(input("enter the maths mark:"))
+sci=int(input("enter the science mark:"))
+cs=int(input("enter the computer science mark:"))
+tot=tam+eng+mat+sci+cs
+avg=tot/5
+if avg >= 90:
+    grade = "A"
+elif avg >= 80:
+    grade = "B"
+elif avg >= 70:
+    grade = "C"
+elif avg >= 60:
+    grade = "D"
+else:
+    grade = "F"
+print("name:",name)
+print("total:",tot)
+print("average:",avg)
+print ("grade:",grade)
