@@ -1,0 +1,51 @@
+while True:
+    name = input("Enter the student name: ")
+
+    if name.replace(" ", "").isalpha():
+        break
+
+    print("Please enter a valid name.")
+
+
+def get_mark(subject):
+    while True:
+        try:
+            mark = int(input("Enter " + subject + " mark: "))
+
+            if 0 <= mark <= 100:
+                return mark
+
+            print("Invalid mark! Enter a value between 0 and 100.")
+
+        except ValueError:
+            print("Please enter a number.")
+
+
+tamil = get_mark("Tamil")
+english = get_mark("English")
+maths = get_mark("Maths")
+science = get_mark("Science")
+computer = get_mark("Computer")
+
+
+total = tamil + english + maths + science + computer
+average = total / 5
+
+
+if average >= 90:
+    grade = "A"
+elif average >= 80:
+    grade = "B"
+elif average >= 70:
+    grade = "C"
+elif average >= 60:
+    grade = "D"
+else:
+    grade = "F"
+
+
+print("\n------ RESULT ------")
+print("Name:", name)
+print("Total:", total, "/ 500")
+print("Average:", average)
+print("Grade:", grade)
